@@ -56,6 +56,7 @@ branches:
   only:
     - master
     - release-2
+    - msvc-cpuid-hack
 
 cache:
   - C:\Users\appveyor\AppData\Local\Mozilla\sccache\cache

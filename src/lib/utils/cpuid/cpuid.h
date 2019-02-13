@@ -363,7 +363,11 @@ class BOTAN_PUBLIC_API(2,1) CPUID final
             Endian_Status m_endian_status;
          };
 
-      static CPUID_Data& state();
+      static CPUID_Data& CPUID::state()
+         {
+         static BOTAN_THREAD_LOCAL CPUID::CPUID_Data g_cpuid;
+         return g_cpuid;
+         }
    };
 
 }
